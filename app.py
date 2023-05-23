@@ -148,13 +148,13 @@ if click or toggle:
         
         # store individual colors in session state
         store_palette(st.session_state["palette_rgb"])
-        st.download_button("Download", st.session_state["palette_rgb"])
 
         st.write("---")
 
         # sort the colors based on the selected option
         colors = {k: v for k, v in st.session_state.items() if k.startswith("col_")}
         sorted_colors = {k: colors[k] for k in sorted(colors, key=lambda k: int(k.split("_")[-1]))}
+        st.download_button("Download", sorted_colors)
         
         # find the hex representation for matplotlib and plotly settings
         palette_hex = [color for color in sorted_colors.values()][:palette_size]
