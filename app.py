@@ -148,7 +148,7 @@ if click or toggle:
         
         # store individual colors in session state
         store_palette(st.session_state["palette_rgb"])
-        st.sidebar.download_button("Download", st.session_state["palette_rgb"])
+        st.download_button("Download", st.session_state["palette_rgb"])
 
         st.write("---")
 
