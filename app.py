@@ -217,7 +217,7 @@ if click or toggle:
        
 else:
     st.info("👈  Click on 'Find Palette' ot turn on 'Toggle Update' to see the color palette.")
-
+st.sidebar.download_button("Download", st.session_state["palette_rgb"])
 st.sidebar.success(print_praise())   
 st.sidebar.write("---\n")
 st.sidebar.caption("""You can check out the source code [here](https://github.com/syasini/sophisticated_palette).
